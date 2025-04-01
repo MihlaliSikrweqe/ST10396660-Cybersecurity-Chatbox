@@ -72,19 +72,19 @@ namespace CybersecurityAwarenessChatbot
                 Console.WriteLine("Goodbye! Stay safe online.");
                 Console.WriteLine("");
             }
-            else if (question.Contains("how are you"))
+            else if (question.Contains("how are you?"))
             {
                 Console.WriteLine("I'm just a chatbot, but I'm here to help!");
             }
-            else if (question.Contains("What's your purpose"))
+            else if (question.Contains("What's your purpose?"))
             {
                 Console.WriteLine("I educate users about cybersecurity threats and safe online practices.");
             }
-            else if (question.Contains("password safety"))
+            else if (question.Contains("password safety?"))
             {
                 Console.WriteLine("Use strong passwords with at least 12 characters, including symbols, numbers, and upper/lowercase letters.");
             }
-            else if (question.Contains("phishing"))
+            else if (question.Contains("phishing?"))
             {
                 Console.WriteLine("Be cautious of emails asking for personal details. Verify sender addresses and avoid clicking unknown links.");
             }
