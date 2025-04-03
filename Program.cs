@@ -14,7 +14,7 @@ namespace CybersecurityAwarenessChatbot
             Console.Title = "Cybersecurity Awareness Chatbot";
 
             // Play voice greeting
-            Speak("Hello! Welcome to the Cybersecurity Awareness Bot. I'm here to help you stay safe online!");
+            Speak("Hello! Welcome to the CS Cybersecurity Awareness ChatBot. I'm here to help you stay safe online!");
 
             // Call method to display ASCII logo
             DisplayAsciiArt();
