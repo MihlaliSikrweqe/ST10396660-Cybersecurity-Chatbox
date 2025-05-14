@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ST10396660_Cybersecurity_Chatbox;
 
 namespace CybersecurityAwarenessChatbot
 {
@@ -12,6 +13,44 @@ namespace CybersecurityAwarenessChatbot
         static void Main(string[] args)
         {
             Console.Title = "Cybersecurity Awareness Chatbot";
+            UI.DisplayAsciiArt();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            UI.TypeWrite("Hello! Welcome to the CS Cybersecurity Awareness ChatBot.");
+            UI.TypeWrite("I'm here to help you stay safe online!");
+
+            Chatbot chatbot = new Chatbot();
+
+            Console.Write("\nWhat's your name? ");
+            string name = Console.ReadLine();
+            while (string.IsNullOrWhiteSpace(name))
+            {
+                Console.Write("Please enter a valid name: ");
+                name = Console.ReadLine();
+            }
+
+            chatbot.UserName = name;
+            UI.TypeWrite($"Welcome, {name}! Ask me anything about cybersecurity.\n");
+
+            while (true)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("\n> ");
+                string input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    UI.TypeWrite("I didn't catch that. Could you try again?");
+                    continue;
+                }
+
+                if (input.ToLower().Contains("exit") || input.ToLower().Contains("bye"))
+                {
+                    UI.TypeWrite("Goodbye! Stay safe online.");
+                    break;
+                }
+
+                chatbot.RespondToUser(input); // Part 2
+            }
 
             // Play voice greeting
             Speak("Hello! Welcome to the CS Cybersecurity Awareness ChatBot. I'm here to help you stay safe online!");
@@ -119,4 +158,6 @@ namespace CybersecurityAwarenessChatbot
         }
 
     }
+        
 }
+
